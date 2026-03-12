@@ -15,7 +15,7 @@ import pandas as pd
 import numpy as np
 import re
 import io
-from pil import image
+from PIL import Image
 from collections import Counter
 from wordcloud import WordCloud, STOPWORDS
 

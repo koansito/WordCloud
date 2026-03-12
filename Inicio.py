@@ -15,6 +15,7 @@ import pandas as pd
 import numpy as np
 import re
 import io
+from pil import image
 from collections import Counter
 from wordcloud import WordCloud, STOPWORDS
 
@@ -375,11 +376,6 @@ def fig_a_bytes(fig):
 # ─────────────────────────────────────────────
 # SIDEBAR
 # ─────────────────────────────────────────────
-
-image = Image.open('rosemary.png')
-
-st.image(image,width=300)
-
 with st.sidebar:
     st.markdown("## ☁️ WordCloud Studio")
     st.divider()
@@ -476,7 +472,9 @@ with st.sidebar:
 # ─────────────────────────────────────────────
 # CONTENIDO PRINCIPAL
 # ─────────────────────────────────────────────
+image = Image.open('rosemary.png')
 
+st.image(image,width=300)
 # Header
 st.markdown("""
 <div class="header-card">
@@ -563,11 +561,6 @@ if not generar or not texto_input.strip():
 # ─────────────────────────────────────────────
 # PROCESAMIENTO
 # ─────────────────────────────────────────────
-
-image = Image.open('rosemary.png')
-
-st.image(image,width=300)
-
 stopwords_set = obtener_stopwords(idioma) if idioma != "Ninguno" else set()
 if palabras_extra.strip():
     stopwords_set |= {p.strip().lower() for p in palabras_extra.split(",") if p.strip()}

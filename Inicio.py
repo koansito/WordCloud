@@ -32,7 +32,7 @@ st.set_page_config(
 # ESTILOS — diseño profesional / corporativo
 # ─────────────────────────────────────────────
 
-image = Image.open('rosemary.png')
+image = image.open('rosemary.png')
 
 st.image(image,width=300)
 

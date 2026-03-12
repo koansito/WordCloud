@@ -32,9 +32,7 @@ st.set_page_config(
 # ESTILOS — diseño profesional / corporativo
 # ─────────────────────────────────────────────
 
-image = image.open('rosemary.png')
 
-st.image(image,width=300)
 
 st.markdown("""
 <style>
@@ -377,6 +375,11 @@ def fig_a_bytes(fig):
 # ─────────────────────────────────────────────
 # SIDEBAR
 # ─────────────────────────────────────────────
+
+image = Image.open('rosemary.png')
+
+st.image(image,width=300)
+
 with st.sidebar:
     st.markdown("## ☁️ WordCloud Studio")
     st.divider()
